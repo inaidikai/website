@@ -36,18 +36,18 @@ function addStar() {
 
 Array(200).fill().forEach(addStar);
 
-const spaceTexture = new THREE.TextureLoader().load('galaxy.jpg');
+const spaceTexture = new THREE.TextureLoader().load('/images/galaxy.jpg');
 scene.background = spaceTexture;
 
-const inshTexture = new THREE.TextureLoader().load('picture.png');
+const inshTexture = new THREE.TextureLoader().load('/images/picture.png');
 const insh = new THREE.Mesh(
   new THREE.BoxGeometry(3, 3, 3),
   new THREE.MeshBasicMaterial({ map: inshTexture })
 );
 scene.add(insh);
 
-const moonTexture = new THREE.TextureLoader().load('moon.jpg');
-const normalTexture = new THREE.TextureLoader().load('normal.jpg');
+const moonTexture = new THREE.TextureLoader().load('/images/moon.jpg');
+const normalTexture = new THREE.TextureLoader().load('/images/normal.jpg');
 const moon = new THREE.Mesh(
   new THREE.SphereGeometry(3, 32, 32),
   new THREE.MeshStandardMaterial({
