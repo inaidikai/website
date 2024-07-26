@@ -39,12 +39,12 @@ Array(200).fill().forEach(addStar);
 const spaceTexture = new THREE.TextureLoader().load('./static/images/galaxy.jpg');
 scene.background = spaceTexture;
 
-const inshTexture = new THREE.TextureLoader().load('./static/images/picture.png');
-const insh = new THREE.Mesh(
-  new THREE.BoxGeometry(3, 3, 3),
-  new THREE.MeshBasicMaterial({ map: inshTexture })
-);
-scene.add(insh);
+// const inshTexture = new THREE.TextureLoader().load('./static/images/picture.png');
+// const insh = new THREE.Mesh(
+//   new THREE.BoxGeometry(3, 3, 3),
+//   new THREE.MeshBasicMaterial({ map: inshTexture })
+// );
+// scene.add(insh);
 
 const moonTexture = new THREE.TextureLoader().load('./static/images/moon.jpg');
 const normalTexture = new THREE.TextureLoader().load('./static/images/normal.jpg');
