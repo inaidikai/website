@@ -18,6 +18,13 @@ scene.add(torus);
 
 torus.position.setX(-10);
 
+const geom = new THREE.ConeGeometry(10, 3,16, 100);
+const mater = new THREE.MeshStandardMaterial({color: 0x000000});
+const cone =  new THREE.Mesh(geom, mater);
+scene.add(cone);
+
+cone.position.setX(20);
+
 const pointLight = new THREE.PointLight(0xffffff);
 pointLight.position.set(5, 5, 5);
 const ambientLight = new THREE.AmbientLight(0xffffff, 1);
@@ -65,8 +72,8 @@ function moveCamera() {
   moon.rotation.y += 0.075;
   moon.rotation.z += 0.05;
 
-  insh.rotation.y += 0.01;
-  insh.rotation.z += 0.01;
+  // insh.rotation.y += 0.01;
+  // insh.rotation.z += 0.01;
 
   camera.position.z = 10 + t * -0.01;
   camera.position.x = t * -0.0002;
@@ -80,6 +87,10 @@ function animate() {
   torus.rotation.x += 0.01;
   torus.rotation.y += 0.005;
   torus.rotation.z += 0.01;
+
+  cone.rotation.x +=0.01;
+  cone.rotation.y += 0.005;
+  cone.rotation.z += 0.005;
 
   controls.update();
   renderer.render(scene, camera);
